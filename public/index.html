@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>FortWars.io</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="topbar"><div class="brand"><span class="logo">F</span><span>FORTWARS<span class="dot">.IO</span></span></div><div class="status"><i></i> LIVE ARENA</div><div class="players" id="playerCount">1 PLAYER</div></div>
+  <main><canvas id="game"></canvas>
+    <section class="hud"><div class="stats"><div class="stat"><small>HEALTH</small><strong id="health">100</strong><div class="bar"><span id="healthBar"></span></div></div><div class="stat"><small>WOOD</small><strong id="wood">80</strong></div><div class="stat"><small>STONE</small><strong id="stone">40</strong></div></div>
+    <div class="help"><b>CONTROLS</b><span>WASD MOVE · CLICK FIRE · E GATHER</span><span>Q BUILD · 1 WALL · 2 FLOOR · 3 RAMP · R ROTATE</span></div></section>
+    <div class="buildbar"><button data-piece="wall" class="active">1 <b>WALL</b><small>10 WOOD</small></button><button data-piece="floor">2 <b>FLOOR</b><small>15 WOOD</small></button><button data-piece="ramp">3 <b>RAMP</b><small>15 WOOD</small></button><button id="buildToggle">Q <b>BUILD: OFF</b></button></div>
+    <div class="mobile-controls"><button id="up">▲</button><div><button id="left">◀</button><button id="down">▼</button><button id="right">▶</button></div><button id="gather">GATHER</button></div>
+    <div id="toast"></div>
+  </main>
+  <script src="/socket.io/socket.io.js"></script><script src="/client.js"></script>
+</body></html>
